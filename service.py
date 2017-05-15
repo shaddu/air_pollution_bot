@@ -6,6 +6,27 @@ def handler(event, context):
     # e = event.get('e')
     # pi = event.get('pi')
     # return e + pi
-    result = event['currentIntent']['slots']['city']
+    city = event['currentIntent']['slots']['city']
+    session_attributes = event['sessionAttributes'] if event['sessionAttributes'] is not None else {}
+
     # + " is highly polluted"
-    return result
+    return close(
+        session_attributes,
+        'Fulfilled',
+        {
+            'contentType': 'PlainText',
+            'content': city + ' is highly polluted '
+        }
+    )
+
+def close(session_attributes, fulfillment_state, message):
+    response = {
+        'sessionAttributes': session_attributes,
+        'dialogAction': {
+            'type': 'Close',
+            'fulfillmentState': fulfillment_state,
+            'message': message
+        }
+    }
+
+    return response

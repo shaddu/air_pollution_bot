@@ -1,0 +1,10 @@
+{
+    "sessionAttributes": {
+    "key1": "value1",
+    "key2": "value2"
+  },
+  "dialogAction": {
+    "type": "ElicitIntent, ElicitSlot, ConfirmIntent, Delegate, or Close"
+    // Full structure based on the type field. See below for details.
+  }
+}

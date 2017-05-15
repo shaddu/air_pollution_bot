@@ -1,5 +1,21 @@
 {
-  "pi": 3.14,
-  "e": 2.718,
-  "city": "delhi"
+    "messageVersion": "1.0",
+    "invocationSource": "DialogCodeHook",
+    "userId": "ignw84y6seypre4xly5rimopuri2xwnd",
+    "sessionAttributes": {},
+    "bot": {
+        "name": "air_pollution_bot",
+        "alias": null,
+        "version": "$LATEST"
+    },
+    "outputDialogMode": "Text",
+    "currentIntent": {
+        "name": "OrderFlowers",
+        "slots": {
+            "city": "delhi",
+            "FlowerType": null,
+            "PickupDate": null
+        },
+        "confirmationStatus": "None"
+    }
 }
